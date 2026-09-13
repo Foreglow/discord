@@ -15,27 +15,25 @@
 
 <details>
   <summary>🌃 Foreglow</summary>
-  <img width="1800" height="1040" alt="foreglow-discord" src="https://github.com/user-attachments/assets/6b7cecd4-8195-448c-a1d7-f6a21f69f792" />
+  <img width="1541" height="1084" alt="discord-foreglow" src="https://github.com/user-attachments/assets/69d37232-d103-456e-8df6-f2c85c5396ec" />
 </details>
 
 <details>
   <summary>🌇 Afterglow</summary>
-  <img width="1800" height="1040" alt="afterglow-discord" src="https://github.com/user-attachments/assets/78cbdba2-ec0f-4f7c-a3f0-24282818a588" />
+  <img width="1541" height="1084" alt="discord-afterglow" src="https://github.com/user-attachments/assets/2038bba0-76d1-4323-ad85-5a0e20e8bdba" />
 </details>
 
 <details>
   <summary>🌉 Alpenglow</summary>
-  <img width="1800" height="1040" alt="alpenglow-discord" src="https://github.com/user-attachments/assets/1e96c1fc-914f-484b-b1c2-7b3997e3fee1" />
+  <img width="1541" height="1084" alt="discord-alpenglow" src="https://github.com/user-attachments/assets/0d353878-f503-4cb2-8722-3731064e926c" />
 </details>
 
 <details>
   <summary>🌌 Airglow</summary>
-  <img width="1800" height="1040" alt="airglow-discord" src="https://github.com/user-attachments/assets/98172782-f4a7-460e-ac26-b760d2797deb" />
+  <img width="1541" height="1084" alt="discord-airglow" src="https://github.com/user-attachments/assets/6ff2f82a-3966-4be3-8df4-85e8017e2fc4" />
 </details>
 
 A twilight-inspired dark theme for Discord using BetterDiscord/Vesktop.
-
-***Note:** Official installation may differ from the previews above.*
 
 ## Installation
 
@@ -62,18 +60,13 @@ A twilight-inspired dark theme for Discord using BetterDiscord/Vesktop.
 These themes override as much of Discord's UI as possible, but Discord's
 own built-in "Default Theme" preset (Light, Dark, Ash, Onyx) still shows
 through wherever a theme doesn't reach. There's no way for a `.theme.css`
-file to detect or force which of these presets is active — that's
-Discord's own Settings state, not something CSS can read — so pick the
+file to detect or force which of these presets is active, so pick the
 matching one manually for the best result:
 
 Go to **Settings → Experience → Appearance → Theme** and select:
 
 - **Light** when using **Afterglow**
 - **Onyx** when using **Foreglow**, **Airglow**, or **Alpenglow**
-
-This isn't unique to Foreglow — even dedicated dark-mode themes for
-Discord require pairing their theme with a specific Default Theme preset
-(e.g. AMOLED-cord requires Onyx) for the same reason.
 
 ## Color Palette
 
