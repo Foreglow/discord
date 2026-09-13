@@ -57,6 +57,24 @@ A twilight-inspired dark theme for Discord using BetterDiscord/Vesktop.
    - **Linux**: `~/.config/Vesktop/themes/`
 3. Enable the theme in Vesktop → Settings → Themes
 
+### Pair with the matching Discord Default Theme
+
+These themes override as much of Discord's UI as possible, but Discord's
+own built-in "Default Theme" preset (Light, Dark, Ash, Onyx) still shows
+through wherever a theme doesn't reach. There's no way for a `.theme.css`
+file to detect or force which of these presets is active — that's
+Discord's own Settings state, not something CSS can read — so pick the
+matching one manually for the best result:
+
+Go to **Settings → Experience → Appearance → Theme** and select:
+
+- **Light** when using **Afterglow**
+- **Onyx** when using **Foreglow**, **Airglow**, or **Alpenglow**
+
+This isn't unique to Foreglow — even dedicated dark-mode themes for
+Discord require pairing their theme with a specific Default Theme preset
+(e.g. AMOLED-cord requires Onyx) for the same reason.
+
 ## Color Palette
 
 ### Foreglow (Dark)
