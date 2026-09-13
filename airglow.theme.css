@@ -1,0 +1,537 @@
+/**
+ * @name Airglow
+ * @author William N. Johnson
+ * @version 1.0.0
+ * @description Twilight-inspired dark theme (auroral)
+ * @website https://github.com/Foreglow/discord
+ * @source https://github.com/Foreglow/discord
+ * **/
+
+:root {
+  /* Legacy Discord theming variables */
+  --background-primary: #0A1A1F;
+  --background-secondary: #0F2024;
+  --background-secondary-alt: #0F2024;
+  --background-tertiary: #0F2024;
+  --background-accent: #2EE8C8;
+  --background-floating: #0F2024;
+  --background-modifier-hover: rgba(22, 46, 52, 0.5);
+  --background-modifier-selected: rgba(22, 46, 52, 0.7);
+  --background-modifier-active: rgba(22, 46, 52, 0.8);
+  --background-modifier-accent: rgba(46, 232, 200, 0.15);
+  --text-normal: #E0F0F5;
+  --text-muted: #7A9AA0;
+  --text-link: #4AA8D0;
+  --header-primary: #E0F0F5;
+  --header-secondary: #7A9AA0;
+  --interactive-normal: #7A9AA0;
+  --interactive-hover: #E0F0F5;
+  --interactive-active: #2EE8C8;
+  --interactive-muted: #5A8A90;
+  --text-positive: #4AC878;
+  --text-warning: #D4B870;
+  --text-danger: #E87070;
+  --channeltextarea-background: #0F2024;
+  --scrollbar-thin-thumb: #2A4A50;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #2A4A50;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: #2A4A50;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+  --input-background: #0F2024;
+  --textarea-background: #0F2024;
+  --deprecated-card-bg: #0F2024;
+  --deprecated-card-editable-bg: #0F2024;
+  --deprecated-store-bg: #0F2024;
+  --deprecated-quickswitcher-input-background: #0F2024;
+  --deprecated-text-input-bg: #0F2024;
+  --deprecated-text-input-bg-hover: #0F2024;
+  --deprecated-text-input-border: #2A4A50;
+  --deprecated-text-input-border-hover: #2EE8C8;
+  --deprecated-text-input-border-active: #2EE8C8;
+
+  /* Visual-refresh Discord theming variables */
+  --background-base-low: #0A1A1F;
+  --background-base-lower: #0A1A1F;
+  --background-base-lowest: #0F2024;
+  --background-surface-high: #0F2024;
+  --background-surface-higher: #0F2024;
+  --background-surface-highest: #162E34;
+  --background-mod-subtle: rgba(122, 154, 160, 0.08);
+  --background-mod-normal: rgba(122, 154, 160, 0.16);
+  --background-mod-strong: rgba(122, 154, 160, 0.24);
+  --background-mod-muted: rgba(122, 154, 160, 0.05);
+  --background-code: #0F2024;
+  --background-gradient-highest: #0A1A1F;
+  --chat-background: #0A1A1F;
+  --chat-background-default: #0A1A1F;
+  --chat-border: #2A4A50;
+  --chat-text-muted: #7A9AA0;
+  --modal-background: #0F2024;
+  --modal-footer-background: #0F2024;
+  --card-background-default: #0F2024;
+  --home-background: #0A1A1F;
+  --app-frame-background: #0A1A1F;
+  --text-default: #E0F0F5;
+  --text-strong: #E0F0F5;
+  --text-subtle: #7A9AA0;
+  --text-brand: #2EE8C8;
+  --textbox-markdown-syntax: #5A8A90;
+  --text-feedback-critical: #E87070;
+  --text-feedback-info: #4AA8D0;
+  --text-feedback-positive: #4AC878;
+  --text-feedback-warning: #D4B870;
+  --text-status-online: #4AC878;
+  --text-status-idle: #D4B870;
+  --text-status-dnd: #E87070;
+  --text-status-offline: #7A9AA0;
+  --icon-default: #E0F0F5;
+  --icon-muted: #7A9AA0;
+  --icon-strong: #E0F0F5;
+  --icon-subtle: #5A8A90;
+  --icon-feedback-critical: #E87070;
+  --icon-feedback-info: #4AA8D0;
+  --icon-feedback-positive: #4AC878;
+  --icon-feedback-warning: #D4B870;
+  --icon-status-online: #4AC878;
+  --icon-status-idle: #D4B870;
+  --icon-status-dnd: #E87070;
+  --icon-status-offline: #7A9AA0;
+  --icon-voice-muted: #E87070;
+  --channel-icon: #7A9AA0;
+  --channels-default: #7A9AA0;
+  --channel-text-area-placeholder: #5A8A90;
+  --interactive-text-default: #7A9AA0;
+  --interactive-text-hover: #E0F0F5;
+  --interactive-text-active: #2EE8C8;
+  --interactive-icon-default: #7A9AA0;
+  --interactive-icon-hover: #E0F0F5;
+  --interactive-icon-active: #2EE8C8;
+  --interactive-background-hover: rgba(22, 46, 52, 0.5);
+  --interactive-background-active: rgba(22, 46, 52, 0.7);
+  --interactive-background-selected: rgba(22, 46, 52, 0.7);
+  --border-subtle: rgba(42, 74, 80, 0.4);
+  --border-muted: rgba(42, 74, 80, 0.6);
+  --border-normal: #2A4A50;
+  --border-strong: #7A9AA0;
+  --message-background-hover: rgba(22, 46, 52, 0.3);
+  --message-highlight-background-default: rgba(212, 184, 112, 0.1);
+  --message-highlight-background-hover: rgba(212, 184, 112, 0.15);
+  --message-mentioned-background-default: rgba(46, 232, 200, 0.1);
+  --message-mentioned-background-hover: rgba(46, 232, 200, 0.15);
+  --message-reacted-background-default: rgba(46, 232, 200, 0.1);
+  --message-reacted-text-default: #2EE8C8;
+  --message-automod-background-default: rgba(212, 184, 112, 0.08);
+  --message-automod-background-hover: rgba(212, 184, 112, 0.12);
+  --mention-background: rgba(46, 232, 200, 0.15);
+  --mention-foreground: #2EE8C8;
+  --notice-background-critical: #E87070;
+  --notice-background-info: #4AA8D0;
+  --notice-background-positive: #4AC878;
+  --notice-background-warning: #D4B870;
+  --notice-text-critical: #E0F0F5;
+  --notice-text-info: #E0F0F5;
+  --notice-text-positive: #E0F0F5;
+  --notice-text-warning: #E0F0F5;
+  --status-danger: #E87070;
+  --status-positive: #4AC878;
+  --status-positive-background: rgba(74, 200, 120, 0.15);
+  --status-positive-text: #4AC878;
+  --status-warning: #D4B870;
+  --status-warning-background: rgba(212, 184, 112, 0.15);
+  --status-warning-text: #D4B870;
+  --control-primary-background-default: #2EE8C8;
+  --control-primary-background-hover: #47EBCF;
+  --control-primary-background-active: #58EDD3;
+  --control-secondary-background-default: #0F2024;
+  --control-secondary-background-hover: #162E34;
+  --control-secondary-background-active: #162E34;
+  --control-secondary-border-default: #2A4A50;
+  --control-secondary-text-default: #E0F0F5;
+  --control-secondary-text-hover: #E0F0F5;
+  --control-critical-primary-background-default: #E87070;
+  --control-critical-primary-background-hover: #EB8181;
+  --control-critical-primary-background-active: #ED8D8D;
+  --control-critical-primary-text-default: #FFFFFF;
+  --control-critical-primary-text-hover: #FFFFFF;
+  --control-critical-secondary-background-default: transparent;
+  --control-critical-secondary-background-hover: rgba(232, 112, 112, 0.1);
+  --control-critical-secondary-background-active: rgba(232, 112, 112, 0.15);
+  --control-critical-secondary-border-default: #E87070;
+  --control-critical-secondary-border-hover: #E87070;
+  --control-critical-secondary-text-default: #E87070;
+  --control-critical-secondary-text-hover: #E87070;
+  --control-connected-background-default: #0F2024;
+  --control-connected-background-hover: #0F2024;
+  --control-connected-background-active: #162E34;
+  --control-connected-border-default: #2A4A50;
+  --control-connected-border-hover: #2EE8C8;
+  --control-brand-foreground: #2EE8C8;
+  --control-brand-foreground-new: #2EE8C8;
+  --input-background-default: #0F2024;
+  --input-border-default: #2A4A50;
+  --input-text-default: #E0F0F5;
+  --input-placeholder-text-default: #5A8A90;
+  --checkbox-border-default: #2A4A50;
+  --checkbox-icon-active: #2EE8C8;
+  --badge-notification-background: #E87070;
+  --badge-text-brand: #2EE8C8;
+  --custom-status-bubble-background: #0F2024;
+  --custom-status-bubble-background-color: #0F2024;
+  --spoiler-hidden-background: #0F2024;
+  --spoiler-revealed-background: rgba(122, 154, 160, 0.1);
+  --thread-core: #2EE8C8;
+  --thread-default: #2A4A50;
+  --thread-muted: #5A8A90;
+  --thread-spine: #2A4A50;
+  --spine-default: #2A4A50;
+  --user-profile-overlay-background: rgba(10, 26, 31, 0.85);
+  --user-profile-overlay-background-hover: rgba(10, 26, 31, 0.95);
+  --logo-primary: #2EE8C8;
+
+  /* Brand color scale, derived from the accent color */
+  --brand-100: #EEFDFB;
+  --brand-130: #E0FCF7;
+  --brand-160: #D1FAF3;
+  --brand-200: #BEF8EE;
+  --brand-230: #B0F6EA;
+  --brand-260: #A1F5E6;
+  --brand-300: #8EF3E1;
+  --brand-330: #80F1DE;
+  --brand-360: #71EFDA;
+  --brand-400: #5EEDD5;
+  --brand-430: #50ECD1;
+  --brand-460: #41EACD;
+  --brand-500: #2EE8C8;
+  --brand-530: #2BD9BB;
+  --brand-560: #28CAAE;
+  --brand-600: #24B79E;
+  --brand-630: #21A891;
+  --brand-660: #1E9984;
+  --brand-700: #1A8573;
+  --brand-730: #187766;
+  --brand-760: #15685A;
+  --brand-800: #115449;
+  --brand-830: #0E453C;
+  --brand-860: #0B372F;
+  --brand-900: #07231E;
+  --brand-5a: rgba(46, 232, 200, 0.05);
+  --brand-10a: rgba(46, 232, 200, 0.1);
+  --brand-15a: rgba(46, 232, 200, 0.15);
+  --brand-20a: rgba(46, 232, 200, 0.2);
+  --brand-25a: rgba(46, 232, 200, 0.25);
+  --brand-30a: rgba(46, 232, 200, 0.3);
+  --brand-35a: rgba(46, 232, 200, 0.35);
+  --brand-40a: rgba(46, 232, 200, 0.4);
+  --brand-45a: rgba(46, 232, 200, 0.45);
+  --brand-50a: rgba(46, 232, 200, 0.5);
+  --brand-55a: rgba(46, 232, 200, 0.55);
+  --brand-60a: rgba(46, 232, 200, 0.6);
+  --brand-65a: rgba(46, 232, 200, 0.65);
+  --brand-70a: rgba(46, 232, 200, 0.7);
+  --brand-75a: rgba(46, 232, 200, 0.75);
+  --brand-80a: rgba(46, 232, 200, 0.8);
+  --brand-85a: rgba(46, 232, 200, 0.85);
+  --brand-90a: rgba(46, 232, 200, 0.9);
+  --brand-95a: rgba(46, 232, 200, 0.95);
+}
+
+.theme-dark,
+.theme-light {
+  /* Legacy Discord theming variables */
+  --background-primary: #0A1A1F;
+  --background-secondary: #0F2024;
+  --background-secondary-alt: #0F2024;
+  --background-tertiary: #0F2024;
+  --background-accent: #2EE8C8;
+  --background-floating: #0F2024;
+  --background-modifier-hover: rgba(22, 46, 52, 0.5);
+  --background-modifier-selected: rgba(22, 46, 52, 0.7);
+  --background-modifier-active: rgba(22, 46, 52, 0.8);
+  --background-modifier-accent: rgba(46, 232, 200, 0.15);
+  --text-normal: #E0F0F5;
+  --text-muted: #7A9AA0;
+  --text-link: #4AA8D0;
+  --header-primary: #E0F0F5;
+  --header-secondary: #7A9AA0;
+  --interactive-normal: #7A9AA0;
+  --interactive-hover: #E0F0F5;
+  --interactive-active: #2EE8C8;
+  --interactive-muted: #5A8A90;
+  --text-positive: #4AC878;
+  --text-warning: #D4B870;
+  --text-danger: #E87070;
+  --channeltextarea-background: #0F2024;
+  --scrollbar-thin-thumb: #2A4A50;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #2A4A50;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: #2A4A50;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+  --input-background: #0F2024;
+  --textarea-background: #0F2024;
+  --deprecated-card-bg: #0F2024;
+  --deprecated-card-editable-bg: #0F2024;
+  --deprecated-store-bg: #0F2024;
+  --deprecated-quickswitcher-input-background: #0F2024;
+  --deprecated-text-input-bg: #0F2024;
+  --deprecated-text-input-bg-hover: #0F2024;
+  --deprecated-text-input-border: #2A4A50;
+  --deprecated-text-input-border-hover: #2EE8C8;
+  --deprecated-text-input-border-active: #2EE8C8;
+
+  /* Visual-refresh Discord theming variables */
+  --background-base-low: #0A1A1F;
+  --background-base-lower: #0A1A1F;
+  --background-base-lowest: #0F2024;
+  --background-surface-high: #0F2024;
+  --background-surface-higher: #0F2024;
+  --background-surface-highest: #162E34;
+  --background-mod-subtle: rgba(122, 154, 160, 0.08);
+  --background-mod-normal: rgba(122, 154, 160, 0.16);
+  --background-mod-strong: rgba(122, 154, 160, 0.24);
+  --background-mod-muted: rgba(122, 154, 160, 0.05);
+  --background-code: #0F2024;
+  --background-gradient-highest: #0A1A1F;
+  --chat-background: #0A1A1F;
+  --chat-background-default: #0A1A1F;
+  --chat-border: #2A4A50;
+  --chat-text-muted: #7A9AA0;
+  --modal-background: #0F2024;
+  --modal-footer-background: #0F2024;
+  --card-background-default: #0F2024;
+  --home-background: #0A1A1F;
+  --app-frame-background: #0A1A1F;
+  --text-default: #E0F0F5;
+  --text-strong: #E0F0F5;
+  --text-subtle: #7A9AA0;
+  --text-brand: #2EE8C8;
+  --textbox-markdown-syntax: #5A8A90;
+  --text-feedback-critical: #E87070;
+  --text-feedback-info: #4AA8D0;
+  --text-feedback-positive: #4AC878;
+  --text-feedback-warning: #D4B870;
+  --text-status-online: #4AC878;
+  --text-status-idle: #D4B870;
+  --text-status-dnd: #E87070;
+  --text-status-offline: #7A9AA0;
+  --icon-default: #E0F0F5;
+  --icon-muted: #7A9AA0;
+  --icon-strong: #E0F0F5;
+  --icon-subtle: #5A8A90;
+  --icon-feedback-critical: #E87070;
+  --icon-feedback-info: #4AA8D0;
+  --icon-feedback-positive: #4AC878;
+  --icon-feedback-warning: #D4B870;
+  --icon-status-online: #4AC878;
+  --icon-status-idle: #D4B870;
+  --icon-status-dnd: #E87070;
+  --icon-status-offline: #7A9AA0;
+  --icon-voice-muted: #E87070;
+  --channel-icon: #7A9AA0;
+  --channels-default: #7A9AA0;
+  --channel-text-area-placeholder: #5A8A90;
+  --interactive-text-default: #7A9AA0;
+  --interactive-text-hover: #E0F0F5;
+  --interactive-text-active: #2EE8C8;
+  --interactive-icon-default: #7A9AA0;
+  --interactive-icon-hover: #E0F0F5;
+  --interactive-icon-active: #2EE8C8;
+  --interactive-background-hover: rgba(22, 46, 52, 0.5);
+  --interactive-background-active: rgba(22, 46, 52, 0.7);
+  --interactive-background-selected: rgba(22, 46, 52, 0.7);
+  --border-subtle: rgba(42, 74, 80, 0.4);
+  --border-muted: rgba(42, 74, 80, 0.6);
+  --border-normal: #2A4A50;
+  --border-strong: #7A9AA0;
+  --message-background-hover: rgba(22, 46, 52, 0.3);
+  --message-highlight-background-default: rgba(212, 184, 112, 0.1);
+  --message-highlight-background-hover: rgba(212, 184, 112, 0.15);
+  --message-mentioned-background-default: rgba(46, 232, 200, 0.1);
+  --message-mentioned-background-hover: rgba(46, 232, 200, 0.15);
+  --message-reacted-background-default: rgba(46, 232, 200, 0.1);
+  --message-reacted-text-default: #2EE8C8;
+  --message-automod-background-default: rgba(212, 184, 112, 0.08);
+  --message-automod-background-hover: rgba(212, 184, 112, 0.12);
+  --mention-background: rgba(46, 232, 200, 0.15);
+  --mention-foreground: #2EE8C8;
+  --notice-background-critical: #E87070;
+  --notice-background-info: #4AA8D0;
+  --notice-background-positive: #4AC878;
+  --notice-background-warning: #D4B870;
+  --notice-text-critical: #E0F0F5;
+  --notice-text-info: #E0F0F5;
+  --notice-text-positive: #E0F0F5;
+  --notice-text-warning: #E0F0F5;
+  --status-danger: #E87070;
+  --status-positive: #4AC878;
+  --status-positive-background: rgba(74, 200, 120, 0.15);
+  --status-positive-text: #4AC878;
+  --status-warning: #D4B870;
+  --status-warning-background: rgba(212, 184, 112, 0.15);
+  --status-warning-text: #D4B870;
+  --control-primary-background-default: #2EE8C8;
+  --control-primary-background-hover: #47EBCF;
+  --control-primary-background-active: #58EDD3;
+  --control-secondary-background-default: #0F2024;
+  --control-secondary-background-hover: #162E34;
+  --control-secondary-background-active: #162E34;
+  --control-secondary-border-default: #2A4A50;
+  --control-secondary-text-default: #E0F0F5;
+  --control-secondary-text-hover: #E0F0F5;
+  --control-critical-primary-background-default: #E87070;
+  --control-critical-primary-background-hover: #EB8181;
+  --control-critical-primary-background-active: #ED8D8D;
+  --control-critical-primary-text-default: #FFFFFF;
+  --control-critical-primary-text-hover: #FFFFFF;
+  --control-critical-secondary-background-default: transparent;
+  --control-critical-secondary-background-hover: rgba(232, 112, 112, 0.1);
+  --control-critical-secondary-background-active: rgba(232, 112, 112, 0.15);
+  --control-critical-secondary-border-default: #E87070;
+  --control-critical-secondary-border-hover: #E87070;
+  --control-critical-secondary-text-default: #E87070;
+  --control-critical-secondary-text-hover: #E87070;
+  --control-connected-background-default: #0F2024;
+  --control-connected-background-hover: #0F2024;
+  --control-connected-background-active: #162E34;
+  --control-connected-border-default: #2A4A50;
+  --control-connected-border-hover: #2EE8C8;
+  --control-brand-foreground: #2EE8C8;
+  --control-brand-foreground-new: #2EE8C8;
+  --input-background-default: #0F2024;
+  --input-border-default: #2A4A50;
+  --input-text-default: #E0F0F5;
+  --input-placeholder-text-default: #5A8A90;
+  --checkbox-border-default: #2A4A50;
+  --checkbox-icon-active: #2EE8C8;
+  --badge-notification-background: #E87070;
+  --badge-text-brand: #2EE8C8;
+  --custom-status-bubble-background: #0F2024;
+  --custom-status-bubble-background-color: #0F2024;
+  --spoiler-hidden-background: #0F2024;
+  --spoiler-revealed-background: rgba(122, 154, 160, 0.1);
+  --thread-core: #2EE8C8;
+  --thread-default: #2A4A50;
+  --thread-muted: #5A8A90;
+  --thread-spine: #2A4A50;
+  --spine-default: #2A4A50;
+  --user-profile-overlay-background: rgba(10, 26, 31, 0.85);
+  --user-profile-overlay-background-hover: rgba(10, 26, 31, 0.95);
+  --logo-primary: #2EE8C8;
+
+  /* Brand color scale, derived from the accent color */
+  --brand-100: #EEFDFB;
+  --brand-130: #E0FCF7;
+  --brand-160: #D1FAF3;
+  --brand-200: #BEF8EE;
+  --brand-230: #B0F6EA;
+  --brand-260: #A1F5E6;
+  --brand-300: #8EF3E1;
+  --brand-330: #80F1DE;
+  --brand-360: #71EFDA;
+  --brand-400: #5EEDD5;
+  --brand-430: #50ECD1;
+  --brand-460: #41EACD;
+  --brand-500: #2EE8C8;
+  --brand-530: #2BD9BB;
+  --brand-560: #28CAAE;
+  --brand-600: #24B79E;
+  --brand-630: #21A891;
+  --brand-660: #1E9984;
+  --brand-700: #1A8573;
+  --brand-730: #187766;
+  --brand-760: #15685A;
+  --brand-800: #115449;
+  --brand-830: #0E453C;
+  --brand-860: #0B372F;
+  --brand-900: #07231E;
+  --brand-5a: rgba(46, 232, 200, 0.05);
+  --brand-10a: rgba(46, 232, 200, 0.1);
+  --brand-15a: rgba(46, 232, 200, 0.15);
+  --brand-20a: rgba(46, 232, 200, 0.2);
+  --brand-25a: rgba(46, 232, 200, 0.25);
+  --brand-30a: rgba(46, 232, 200, 0.3);
+  --brand-35a: rgba(46, 232, 200, 0.35);
+  --brand-40a: rgba(46, 232, 200, 0.4);
+  --brand-45a: rgba(46, 232, 200, 0.45);
+  --brand-50a: rgba(46, 232, 200, 0.5);
+  --brand-55a: rgba(46, 232, 200, 0.55);
+  --brand-60a: rgba(46, 232, 200, 0.6);
+  --brand-65a: rgba(46, 232, 200, 0.65);
+  --brand-70a: rgba(46, 232, 200, 0.7);
+  --brand-75a: rgba(46, 232, 200, 0.75);
+  --brand-80a: rgba(46, 232, 200, 0.8);
+  --brand-85a: rgba(46, 232, 200, 0.85);
+  --brand-90a: rgba(46, 232, 200, 0.9);
+  --brand-95a: rgba(46, 232, 200, 0.95);
+}
+
+
+/* Base paint — plain selector, not tied to Discord's internal
+ * (hash-suffixed, frequently-renamed) class names, so it won't go
+ * stale on Discord client updates the way those would. */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-default);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thin-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--interactive-hover);
+}
+
+/* Settings screen sidebar -- verified stable BEM-style class name (not a
+ * webpack hash, so this doesn't go stale on Discord client updates). */
+.SettingsSidebar__item {
+  color: var(--interactive-normal);
+}
+
+.SettingsSidebar__item:hover {
+  color: var(--interactive-hover);
+  background-color: var(--background-modifier-hover);
+}
+
+.SettingsSidebar__item[aria-selected="true"] {
+  color: var(--interactive-active);
+  background-color: var(--background-modifier-selected);
+}
+
+/* Guild (server) list sidebar */
+.GuildsSidebar__scroller {
+  background-color: var(--background-tertiary);
+}
+
+.GuildList__listItem {
+  background-color: transparent;
+}
+
+.GuildSeparator__guildSeparator {
+  background-color: var(--border-normal);
+}
+
+/* Member list sidebar */
+.MembersWrap__members,
+.MembersWrap__membersGroup {
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+}
+
+/* Message text content -- targets Discord's per-message stable ID prefix
+ * rather than a class, since message IDs aren't webpack-hashed. */
+[id^="message-content"] {
+  color: var(--text-default);
+}
