@@ -535,3 +535,90 @@ body {
 [id^="message-content"] {
   color: var(--text-default);
 }
+
+/* Code block syntax highlighting -- Discord renders code blocks via
+ * highlight.js, a third-party library with its own standard, stable
+ * class names (independent of Discord's own build/version, so these
+ * won't go stale). Its bundled default theme assumes a dark background
+ * regardless of Discord's own theme, which is why code text can turn
+ * unreadable (e.g. light-on-light) without an explicit override here. */
+.hljs {
+  color: #24163B;
+  background: #ECE5D5;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7A6F9B;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst,
+.hljs-tag,
+.hljs-name {
+  color: #8930A6;
+}
+
+.hljs-string,
+.hljs-code,
+.hljs-doctag,
+.hljs-regexp,
+.hljs-char {
+  color: #B64820;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #AE296B;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #955F0F;
+}
+
+.hljs-type,
+.hljs-built_in,
+.hljs-attribute,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #1D7187;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-template-tag,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-params,
+.hljs-property,
+.hljs-attr {
+  color: #4D3781;
+}
+
+.hljs-operator,
+.hljs-punctuation,
+.hljs-formula {
+  color: #7F5893;
+}
+
+.hljs-deletion {
+  color: #B12531;
+}
+
+.hljs-addition {
+  color: #22775B;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
